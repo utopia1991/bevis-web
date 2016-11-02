@@ -1,0 +1,115 @@
+.mature-progress {
+  height: 100px;
+  width: 670px;
+  margin: -15px auto 20px;
+  .mature-progress-bottom {
+    border-radius: 5px;
+    padding: 15px;
+    position: relative;
+    height: 100px;
+    width: 690px;
+    p > span {
+      color: #222;
+    }
+    .mature-progress-box {
+      height: 105px;
+      padding: 10px 0 0 10px;
+      position: absolute;
+    }
+    .mature-progress-box.bgtwos {
+      z-index: 1;
+      top: 15px;
+      dl dt {
+        border: #f2f2f2 solid 5px;
+      }
+    }
+    .mature-progress-box.v0 dl:nth-of-type(1) dt {
+      background: #222;
+    }
+    .mature-progress-box.v1 dl:nth-of-type(2) dt {
+      background: #222;
+    }
+    .mature-progress-box.v2 dl:nth-of-type(3) dt {
+      background: #222;
+    }
+    .mature-progress-box.v3 dl:nth-of-type(4) dt {
+      background: #222;
+    }
+    .mature-progress-box.v4 dl:nth-of-type(5) dt {
+      background: #222;
+    }
+    .mature-progress-box {
+      dl {
+        width: 70px;
+        text-align: center;
+        float: left;
+        margin-right: 58px;
+        margin-left: 4px;
+        dt {
+          font-family: england;
+          width: 48px;
+          height: 48px;
+          background: #999999;
+          color: #fff;
+          text-align: center;
+          line-height: 47px;
+          border-radius: 50%;
+          margin: 0 auto;
+          overflow: hidden;
+          position: relative;
+          z-index: 3;
+        }
+        dd {
+          padding-top: 5px;
+        }
+      }
+      .progress-box {
+        position: absolute;
+        width: 576px;
+        height: 15px;
+        border-radius: 10px;
+        border: #f2f2f2 solid 5px;
+        background: #fff;
+        z-index: 2;
+        top: 27px;
+        left: 22px;
+        i {
+          position: absolute;
+          height: 15px;
+          background: #222;
+          left: 36px;
+          top: -5px;
+          width: 0;
+          span {
+            position: absolute;
+            display: inline-block;
+            background: #fff;
+            border-radius: 5px;
+            height: 30px;
+            line-height: 30px;
+            font-weight: normal;
+            font-size: 15px;
+            font-style: normal;
+            border: #cccccc solid 1px;
+            right: -52px;
+            top: -62px;
+            width: 135px;
+            text-align: center;
+          }
+        }
+        i.progress-box-2 {
+          left: 171px;
+        }
+        i.progress-box-3 {
+          left: 305px;
+        }
+        i.progress-box-4 {
+          left: 440px;
+        }
+        i.progress-box-5 {
+          left: 576px;
+        }
+      }
+    }
+  }
+}

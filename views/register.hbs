@@ -1,0 +1,89 @@
+{{#extend "stylesheets"}}
+    <link rel="stylesheet/less" type="text/css" href="/less/common/register.less"/>
+{{/extend}}
+
+<section class="main-register">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" id="alertMessage"></div>
+            <div class="col-sm-4 col-sm-offset-4 register-form">
+                <form class="form-signin" role="form">
+                    <h2 class="form-signin-heading">Register</h2>
+                    <div class="form-group">
+                        <input type="email" id="register-email" class="form-control input-lg" placeholder="E-mail 邮箱"
+                               required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="register-name" class="form-control input-lg" placeholder="姓名" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="register-password" class="form-control input-lg" placeholder="输入密码"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="register-repassword" class="form-control input-lg"
+                               placeholder="再次输入密码" required>
+                    </div>
+                    <a class="btn btn-lg btn-primary btn-block" id="register">登录</a>
+                    <br>
+                    Already have an account? <a href="/login">Login</a> now!
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="slider_warpper">
+    <div class="flex__container flex--zekrom flex--active" data-slide="1">
+        <div class="flex__item flex__item--left">
+            <div class="flex__content">
+                <h1 class="text-big">Zekrom</h1>
+            </div>
+            <p class="text__background">Zekrom</p>
+        </div>
+        <div class="flex__item flex__item--right"></div>
+        <img class="pokemon__img" src="https://s20.postimg.org/v61186719/zekrom.png"/>
+    </div>
+    <div class="flex__container flex--dialga animate--start" data-slide="2">
+        <div class="flex__item flex__item--left">
+            <div class="flex__content">
+                <h1 class="text-big">Dialga</h1>
+            </div>
+            <p class="text__background">Dialga</p>
+        </div>
+        <div class="flex__item flex__item--right"></div>
+        <img class="pokemon__img" src="https://s20.postimg.org/hla991r8d/dialga.png"/>
+    </div>
+    <div class="flex__container flex--pikachu animate--start" data-slide="3">
+        <div class="flex__item flex__item--left">
+            <div class="flex__content">
+                <h1 class="text-big">Pikachu</h1>
+            </div>
+            <p class="text__background">Pikachu</p>
+        </div>
+        <div class="flex__item flex__item--right"></div>
+        <img class="pokemon__img" src="https://s20.postimg.org/efpniu8m5/pikachu.png"/>
+    </div>
+    <div class="flex__container flex--blaziken animate--start" data-slide="4">
+        <div class="flex__item flex__item--left">
+            <div class="flex__content">
+                <h1 class="text-big">Blaziken</h1>
+            </div>
+            <p class="text__background">Blaziken</p>
+        </div>
+        <div class="flex__item flex__item--right"></div>
+        <img class="pokemon__img" src="https://s20.postimg.org/nxpeivual/blaziken.png"/>
+    </div>
+</section>
+
+<nav class="slider__navi">
+    <a href="#" class="slide-nav active" data-slide="1">zekrom</a>
+    <a href="#" class="slide-nav" data-slide="2">dialga</a>
+    <a href="#" class="slide-nav" data-slide="3">pikachu</a>
+    <a href="#" class="slide-nav" data-slide="4">blaziken</a>
+</nav>
+
+{{#extend "scripts"}}
+    <script type="text/javascript" src="/js/base/base.js"></script>
+    <script type="text/javascript" src="/js/register/register.js"></script>
+{{/extend}}

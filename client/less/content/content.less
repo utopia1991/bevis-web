@@ -1,0 +1,171 @@
+#timeNow{
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.wordPlace {
+  .wordTitle{
+    margin: 20px 0px;
+  }
+  text-align: left;
+  border-image: linear-gradient(90deg, #1abc9c 15%, #2ecc71 15%, #2ecc71 12%, #3498db 12%, #3498db 32%, #9b59b6 32%, #9b59b6 35%, #34495e 35%, #34495e 55%, #f1c40f 55%, #f1c40f 59%, #e67e22 59%, #e67e22 63%, #e74c3c 63%, #e74c3c 82%, #ecf0f1 82%, #ecf0f1 92%, #95a5a6 92%);
+  border-image-slice: 1;
+  border-width: 0 0 5px 0;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  transition: 0.5s;
+  .jumpGoogle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    width: 200px;
+    height: 45px;
+    text-decoration: none;
+    background: #343838;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    transition: all 0.2s;
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0px 2px 10px #666;
+    }
+  }
+  // pay me
+  .payMe {
+    display: inline-block;
+    margin-left: 50px;
+    .dashang {
+      display: block;
+      width: 100px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: 45px;
+      line-height: 45px;
+      background-color: #E74851;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.2s;
+      &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0px 2px 10px #666;
+      }
+    }
+    .hide_box {
+      z-index: 999;
+      filter: alpha(opacity=80);
+      background: #222;
+      opacity: 0.8;
+      -moz-opacity: 0.8;
+      left: 0;
+      top: 0;
+      height: 99%;
+      width: 100%;
+      position: fixed;
+      display: none;
+    }
+    .shang_box {
+      width: 540px;
+      height: 440px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      position: fixed;
+      z-index: 1000;
+      left: 50%;
+      top: 50%;
+      margin-left: -280px;
+      margin-top: -250px;
+      border: 1px dotted #dedede;
+      display: none;
+      img {
+        border: none;
+        border-width: 0;
+      }
+      .shang_close {
+        float: right;
+        display: inline-block;
+      }
+      .shang_tit {
+        width: 100%;
+        height: 75px;
+        text-align: center;
+        line-height: 66px;
+        color: #a3a3a3;
+        font-size: 16px;
+        background: url('../../images/payme/cy-reward-title-bg.jpg');
+        margin-top: 7px;
+        margin-right: 2px;
+        p {
+          color: #a3a3a3;
+          text-align: center;
+          font-size: 16px;
+        }
+      }
+      .shang_payimg {
+        width: 140px;
+        border: 6px solid #EA5F00;
+        margin: 0 auto;
+        border-radius: 3px;
+        height: 140px;
+        img {
+          display: block;
+          text-align: center;
+          width: 140px;
+          height: 140px;
+          margin: -6px;
+        }
+      }
+      .pay_explain {
+        text-align: center;
+        margin: 10px auto;
+        font-size: 12px;
+        color: #545454;
+      }
+      .shang_payselect {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 40px;
+        cursor: pointer;
+        height: 60px;
+        width: 280px;
+        .pay_item {
+          display: inline-block;
+          margin-right: 10px;
+          float: left;
+          .radiobox {
+            width: 16px;
+            height: 16px;
+            background: url('../../images/payme/radio2.jpg');
+            display: block;
+            float: left;
+            margin-top: 5px;
+            margin-right: 14px;
+          }
+        }
+        .checked {
+          .radiobox {
+            background: url('../../images/payme/radio1.jpg');
+          }
+        }
+      }
+      .shang_info {
+        clear: both;
+        p, a {
+          color: #C3C3C3;
+          text-align: center;
+          font-size: 12px;
+          text-decoration: none;
+          line-height: 2em;
+        }
+      }
+    }
+  }
+}

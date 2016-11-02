@@ -1,0 +1,145 @@
+/*
+  Check here first before you start writing less/css there may be a mixin available to accomplish what you are trying to do.
+  All padding and margins should be done via mixins.
+*/
+
+@base-font-size-px: 10; // root's font size. @base-font-size-px MUST BE AN INTEGER.
+
+// ===== REM UNIT MIXINS ====
+@pxtorem-js-function: ~`pxtorem = function(val) {
+	rmxsBaseFontSize = @{base-font-size-px};
+	attribute = ''
+	if (val.indexOf("px") > -1) {
+		attribute = (parseInt(val.replace(/(^\d+)(.+$)/i,'$1')) / rmxsBaseFontSize + 'rem')
+	} else {
+		attribute = val
+	}
+	return attribute
+}`;
+
+.font-size(@font-size: 16){
+  @rem: (@font-size / 10);
+  font-size: @font-size * 1px;
+  font-size: ~"@{rem}rem";
+}
+.line-height(@line-height: 24) {
+  @rem: (@line-height / 10);
+  line-height: @line-height * 1px;
+  line-height: ~"@{rem}rem";
+}
+
+// ===== PADDING MIXINS =====
+/*
+  Sample mixin usages:
+  .padding(10px,0,5px,0) //note the commas
+  .padding(10px,0) //note that 0 does not need a px suffix
+  .padding(10px,auto)
+  .padding(10%,5%)
+  .padding(10px)
+*/
+.padding (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  padding: @value;
+  padding: @rem-value;
+}
+.padding (@vert,@horiz) {
+  @rem-vert : ~`pxtorem('@{vert}')`;
+  @rem-horiz : ~`pxtorem('@{horiz}')`;
+  padding: @vert @horiz;
+  padding: @rem-vert @rem-horiz;
+}
+.padding (@top,@right,@bottom) {
+  @rem-top : ~`pxtorem('@{top}')`;
+  @rem-right : ~`pxtorem('@{right}')`;
+  @rem-bottom : ~`pxtorem('@{bottom}')`;
+  @rem-left : ~`pxtorem('@{right}')`;
+  padding: @top @right @bottom @right;
+  padding: @rem-top @rem-right @rem-bottom @rem-left;
+}
+.padding (@top,@right,@bottom,@left) {
+  @rem-top : ~`pxtorem('@{top}')`;
+  @rem-right : ~`pxtorem('@{right}')`;
+  @rem-bottom : ~`pxtorem('@{bottom}')`;
+  @rem-left : ~`pxtorem('@{left}')`;
+  padding: @top @right @bottom @left;
+  padding: @rem-top @rem-right @rem-bottom @rem-left;
+}
+.padding-top (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  padding-top: @value;
+  padding-top: @rem-value;
+}
+.padding-bottom (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  padding-bottom: @value;
+  padding-bottom: @rem-value;
+}
+.padding-left (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  padding-left: @value;
+  padding-left: @rem-value;
+}
+.padding-right (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  padding-right: @value;
+  padding-right: @rem-value;
+}
+
+// ===== MARGIN MIXINS =====
+.margin (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  margin: @value;
+  margin: @rem-value;
+}
+.margin (@vert,@horiz) {
+  @rem-vert : ~`pxtorem('@{vert}')`;
+  @rem-horiz : ~`pxtorem('@{horiz}')`;
+  margin: @vert @horiz;
+  margin: @rem-vert @rem-horiz;
+}
+.margin (@top,@right,@bottom) {
+  @rem-top : ~`pxtorem('@{top}')`;
+  @rem-right : ~`pxtorem('@{right}')`;
+  @rem-bottom : ~`pxtorem('@{bottom}')`;
+  @rem-left : ~`pxtorem('@{right}')`;
+  margin: @top @right @bottom @right;
+  margin: @rem-top @rem-right @rem-bottom @rem-left;
+}
+.margin (@top,@right,@bottom,@left) {
+  @rem-top : ~`pxtorem('@{top}')`;
+  @rem-right : ~`pxtorem('@{right}')`;
+  @rem-bottom : ~`pxtorem('@{bottom}')`;
+  @rem-left : ~`pxtorem('@{left}')`;
+  margin: @top @right @bottom @left;
+  margin: @rem-top @rem-right @rem-bottom @rem-left;
+}
+.margin-top (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  margin-top: @value;
+  margin-top: @rem-value;
+}
+.margin-bottom (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  margin-bottom: @value;
+  margin-bottom: @rem-value;
+}
+.margin-left (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  margin-left: @value;
+  margin-left: @rem-value;
+}
+.margin-right (@value) {
+  @rem-value : ~`pxtorem('@{value}')`;
+  margin-right: @value;
+  margin-right: @rem-value;
+}
+
+// ===== ROUNDED CORNERS =====
+.border-radius (@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius:    @radius;
+  border-radius:         @radius;
+  -moz-background-clip:    padding;
+  -webkit-background-clip: padding-box;
+  background-clip:         padding-box;
+}

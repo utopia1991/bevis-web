@@ -1,0 +1,107 @@
+{{#extend "stylesheets"}}
+    <link rel="stylesheet/less" type="text/css" href="/less/libs/jquery-ui.less"/>
+    <link rel="stylesheet/less" type="text/css" href="/less/marquee/liMarquee.less"/>
+{{/extend}}
+
+<div class="indexContent">
+    <p class="sendInformation">Note Marquee</p>
+    <div class="str4 str_wrap">
+        It's Bevis's personal website. Isn't so amazing?! And this is jQuery Marquee. So Awesome Thing!
+    </div>
+    <div id="progressbar" class="hide">
+        <div class="progress-label"></div>
+    </div>
+    <p class="sendInformation">Enter Your Information</p>
+    <p class="sendInformation">
+        Name : <input type="text" id="tags" >
+    </p>
+    <p class="sendInformation">
+        Begin : <input type="text" id="datepicker1"> &nbsp;
+        End : <input type="text" id="datepicker2"> &nbsp;
+        <button id="popDialog">i</button>
+    </p>
+    <p class="sendInformation">
+        Currency :
+        <select id="currency" name="currency">
+            <option value="en-US">US $</option>
+            <option value="de-DE">EUR €</option>
+            <option value="ja-JP">YEN ¥</option>
+        </select>
+        &nbsp;
+        Price : <input id="spinner" name="spinner" value="5">
+    </p>
+    <p class="sendInformation">Select Hotel Star: </p>
+    <p class="sendInformation">
+        <label for="checkbox-0">1 Star</label>
+        <input type="checkbox" name="checkbox-0" id="checkbox-0" class="checkBox">
+        <label for="checkbox-1">2 Star</label>
+        <input type="checkbox" name="checkbox-1" id="checkbox-1" class="checkBox">
+        <label for="checkbox-2">3 Star</label>
+        <input type="checkbox" name="checkbox-2" id="checkbox-2" class="checkBox">
+        <label for="checkbox-3">4 Star</label>
+        <input type="checkbox" name="checkbox-3" id="checkbox-3" class="checkBox">
+        <label for="checkbox-4">5 Star</label>
+        <input type="checkbox" name="checkbox-4" id="checkbox-4" class="checkBox">
+        <label for="checkbox-5">7 Star</label>
+        <input type="checkbox" name="checkbox-5" id="checkbox-5" class="checkBox">
+    </p>
+    <p class="sendInformation">Select a Location: </p>
+    <p class="sendInformation">
+        <label for="radio-0">Xiamen</label>
+        <input type="radio" name="radio-1" id="radio-0" class="radio">
+        <label for="radio-1">New York</label>
+        <input type="radio" name="radio-1" id="radio-1" class="radio">
+        <label for="radio-2">Paris</label>
+        <input type="radio" name="radio-1" id="radio-2" class="radio">
+        <label for="radio-3">London</label>
+        <input type="radio" name="radio-1" id="radio-3" class="radio">
+        <label for="radio-4">Tokyo</label>
+        <input type="radio" name="radio-1" id="radio-4" class="radio">
+    </p>
+    <p class="sendInformation">
+        Price range: <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>
+    <div id="slider-range"></div>
+    <p class="sendInformation">Read Follow This: </p>
+    <div id="accordion">
+        <h3>comment-1</h3>
+        <div>
+            <p>
+                Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
+            </p>
+        </div>
+        <h3>comment-2</h3>
+        <div>
+            <p>
+                Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                suscipit faucibus urna.
+            </p>
+        </div>
+        <h3>comment-3</h3>
+        <div>
+            <p>
+                Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+            </p>
+        </div>
+    </div>
+    <p class="sendInformation">
+        <button class="ui-button ui-widget ui-corner-all checked-go">Checked! Go!</button>
+    </p>
+    <div id="dialog" class="hide" title="Bevis's dialog">
+        <p>This is the default dialog which is useful for displaying information.</p>
+    </div>
+</div>
+
+{{#extend "scripts"}}
+    <script type="text/javascript" src="/js/libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/libs/jquery.liMarquee.js"></script>
+    <script type="text/javascript" src="/js/information/information.js"></script>
+{{/extend}}

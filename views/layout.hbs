@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>{{title}}</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <link rel="icon" type="image/png" href="/images/icons/icon.png"/>
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png"/>
+    <link rel="stylesheet/less" type="text/css" href="/less/libs/font-awesome/font-awesome.less"/>
+    <link rel="stylesheet/less" type="text/css" href="/less/libs/iconmoon/iconmoon.less"/>
+    <link rel="stylesheet/less" type="text/css" href="/less/libs/bootstrap.less"/>
+    <link rel="stylesheet/less" type="text/css" href="/less/libs/animate.min.less"/>
+    <link rel="stylesheet/less" type="text/css" href="/less/common/common.less"/>
+    {{{block "stylesheets"}}}
+    <script type="text/javascript" src="/js/libs/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="/js/libs/underscore.min.js"></script>
+    <script type="text/javascript" src="/js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/libs/jquery.appear.js"></script>
+    <script type="text/javascript" src="/js/libs/weather/jquery.leoweather.min.js"></script>
+    <!--less预编译脚本一定要在.less文件之后引入--->
+    <script type="text/javascript" src="/js/libs/less.js"></script>
+    <!--[if IE]>
+    <script src="/js/libs/html5shiv.min.js"></script>
+    <![endif]-->
+    {{{block "libs"}}}
+</head>
+<body>
+<div id="pgcontainer">
+    <div class="backCloth hide"></div>
+    {{> header}}
+    {{{body}}}
+    {{> footer}}
+</div>
+</body>
+<script type="text/javascript" src="/js/base/base.js"></script>
+{{{block "scripts"}}}
+</html>

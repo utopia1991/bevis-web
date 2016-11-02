@@ -1,0 +1,95 @@
+<h3>浏览器支持</h3>
+<ul>
+    <li>现代浏览器全部支持</li>
+    <li>IE9+</li>
+    <li>Chrome</li>
+    <li>Edge</li>
+    <li>Firefox</li>
+</ul>
+<h3>效果演示地址</h3>
+<ul>
+    <li>作为body背景</li>
+</ul>
+<p>演示地址1：<a href="http://weber.pub/demo/160905/body-bg.html">http://weber.pub/demo/160905/body-bg.html</a></p>
+<ul>
+    <li>作为一块区域背景</li>
+</ul>
+<p>演示地址2：<a href="http://weber.pub/demo/160905/block-bg.html">http://weber.pub/demo/160905/block-bg.html</a></p>
+<h3>下载</h3>
+<ul>
+    <li>直接下载</li>
+</ul>
+<p><a href="https://github.com/VodkaBears/Vide">github 地址：https://github.com/VodkaBears/Vide</a></p>
+<ul>
+    <li>Bower 安装</li>
+</ul>
+<pre><code>bower install vide
+</code></pre>
+<h3>使用</h3>
+<h4>1、引入文件</h4>
+<p><em>依赖 jQuery</em></p>
+<pre><code>&lt;script src="js/jquery.vide.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<h4>2、准备视频</h4>
+<p>准备视频格式可以是 .webm / .mp4 等浏览器支持的视频格式，最好多准备一张静态的图片。</p>
+<pre><code>path/
+├── src/
+│   ├── video.mp4
+│   ├── video.ogv
+│   ├── video.webm
+│   └── video.jpg
+</code></pre>
+<h4>3、使用</h4>
+<p>添加一个 data-vide-bg 的属性用来引入视频</p>
+<p>data-vide-options 属性是配置文件（配置项后面会介绍）</p>
+<pre><code>&lt;div style="width: 1000px; height: 500px;"
+  data-vide-bg="path/src/video" data-vide-options="loop: false, muted: false, position: 0% 0%"&gt;
+&lt;/div&gt;
+</code></pre>
+<p>你也可以设置扩展路径</p>
+<pre><code>&lt;div style="width: 1000px; height: 500px;"
+  data-vide-bg="mp4: path/to/video1, webm: path/to/video2, ogv: path/to/video3, poster: path/to/poster"
+  data-vide-options="posterType: jpg, loop: false, muted: false, position: 0% 0%"&gt;
+&lt;/div&gt;
+</code></pre>
+<p>下面是一段可以帮助我们调试的代码</p>
+<pre><code>$('#myBlock').vide('path/to/video');
+$('#myBlock').vide('path/to/video', {
+...options...
+});
+$('#myBlock').vide({
+  mp4: path/to/video1,
+  webm: path/to/video2,
+  ogv: path/to/video3,
+  poster: path/to/poster
+}, {
+...options...
+});
+$('#myBlock').vide('extended path as a string', 'options as a string');
+</code></pre>
+<h4>4、配置</h4>
+<p>下面是所有的配置项和初始化值</p>
+<pre><code>{
+  volume: 1,
+  playbackRate: 1,
+  muted: true,
+  loop: true,
+  autoplay: true,
+  position: '50% 50%', // 类似于CSS的背景位置属性
+  posterType: 'detect', // 静态图片类型 "detect" — 自动检测; "none" — 没有静态图; "jpg", "png", "gif",... - 扩展类型
+  resizing: true, // 自动改变大小, read: https://github.com/VodkaBears/Vide#resizing
+  bgColor: 'transparent', // 背景颜色,
+  className: '' // 给Vide的div添加class
+}
+</code></pre>
+<h4>5、方法列表</h4>
+<pre><code>// 获取插件实例
+var instance = $('#yourElement').data('vide');
+// 获取视频元素的背景颜色
+instance.getVideoObject();
+// 调整视频背景大小
+// 随着窗口改变自动调整大小
+instance.resize();
+// 销毁插件
+instance.destroy();
+</code></pre>
