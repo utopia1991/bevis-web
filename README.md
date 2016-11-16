@@ -24,13 +24,13 @@ To install the node packages, and also keep them updated, execute the following 
 > $ ./node_modules/.bin/eslint filepath.js
 ```
 
-![首页](client/images/index.jpg "首页")
+![首页](client/images/demo/index.jpg "首页")
 
-![关于我](client/images/about.jpg "关于我")
+![关于我](client/images/demo/about.jpg "关于我")
 
-![Landing Page](client/images/landingPage.jpg "Landing Page")
+![Landing Page](client/images/demo/landingPage.jpg "Landing Page")
 
-![Information](client/images/information.jpg "Information")
+![Information](client/images/demo/information.jpg "Information")
 
 ## License
 
