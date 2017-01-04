@@ -12,7 +12,8 @@
     "express": "3.4.3",
     "gulp-rev": "^7.1.0",
     "gulp-rev-collector": "^1.0.5",
-    "mongoose": "3.8.24"
+    "mongodb": "^2.2.19",
+    "mongoose": "^4.5.5"
   },
   "devDependencies": {
     "async": "^2.0.1",

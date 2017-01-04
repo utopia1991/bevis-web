@@ -6,9 +6,20 @@ var bodyParser = require('body-parser');                // 中间件 body-parser
 var multer = require('multer');
 var app = module.exports.app = exports.app = express(); // 将 express 开发出去
 var port = config.port || 8000;                         // 设定port变量，意为访问端口
-var blocks = {};
+var mongoose = require('mongoose');                     // 引入数据库
 var router = require('./controller/router');
 var api = require('./controller/api');
+var blocks = {};
+
+mongoose.Promise = global.Promise;
+var db = mongoose.connect('mongodb://localhost:27017/bevisdb');  // 连接数据库
+
+db.connection.on('error', function (error) {
+	console.log('数据库连接失败：' + error);
+});
+db.connection.on('open', function(){
+	console.log('---- mongodb 数据库连接成功 ----')
+});
 
 app.set('view engine', 'hbs');                          // 指定模板文件的后缀名为hbs
 app.use(express.favicon());
@@ -23,18 +34,17 @@ app.use(express.static('client'));                      // 设定本地开发静
 app.engine('html', hbs.__express);                      // 运行hbs模块
 app.listen(port);                                       // 设置端口
 app.use(router);
-// app.use(api);
 
 hbs.registerHelper('extend', function (name, context) { // 设置模版引擎引用 js 和 css
-    var block = blocks[name];
-    if (!block) {
-        block = blocks[name] = [];
-    }
-    block.push(context.fn(this));
+	var block = blocks[name];
+	if (!block) {
+		block = blocks[name] = [];
+	}
+	block.push(context.fn(this));
 });
 hbs.registerHelper('block', function (name) {
-    var val = (blocks[name] || []).join('\n');
-    blocks[name] = [];
-    return val;
+	var val = (blocks[name] || []).join('\n');
+	blocks[name] = [];
+	return val;
 });
 hbs.registerPartials(__dirname + '/views/partials');    // 页面元素模块化
