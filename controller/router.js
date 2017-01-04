@@ -1,7 +1,7 @@
 /*
- * 处理返回动态页面的写法是： render
- * 找不到页面的话用404处理,返回静态页面的写法是： sendfile
- */
+* 处理返回动态页面的写法是： render
+* 找不到页面的话用404处理,返回静态页面的写法是： sendfile
+*/
 
 var express = require('express');
 var router = express();
@@ -143,7 +143,7 @@ router.get('/game', function (req, res) {
 });
 
 router.get('/wechat', function (req, res, next) {
-	Users.find({userId:'0000003'}, function(err, data) {
+	Users.find({address:'helloworld3'}, function(err, data) {
 		console.log('Data: ', data);
 		res.render(
 			'wechat',
@@ -222,6 +222,25 @@ router.post("/api/register", function (req, res) {
 	} else {
 		res.send(404);
 	}
+});
+
+// api send message
+router.post("/api/sendMessage", function(req, res) {
+	var users = new Users({
+		name: req.body.sendName,
+		address: req.body.sendAddress,
+		email: req.body.sendEmail,
+		telephone: req.body.sendTelephone,
+		question: req.body.sendQuestion
+	});
+	users.save(function(err){
+		if(err){
+			console.log(err);
+			res.send(500);
+		} else {
+			res.send(200);
+		}
+	});
 });
 
 module.exports = router;
