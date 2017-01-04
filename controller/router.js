@@ -143,13 +143,14 @@ router.get('/game', function (req, res) {
 });
 
 router.get('/wechat', function (req, res, next) {
-	Users.fetch(function(err, users) {
-		console.log('aaaa', users);
+	Users.find({userId:'0000003'}, function(err, data) {
+		console.log('Data: ', data);
 		res.render(
 			'wechat',
 			{
 				title: 'Bevis Wechat',
-				head: "Bevis Wechat"
+				head: "Bevis Wechat",
+				name: data[0].name
 			}
 		) //这里也可以json的格式直接返回数据 res.json({data: users});
 	})

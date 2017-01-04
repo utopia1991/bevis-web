@@ -11,16 +11,6 @@ var router = require('./controller/router');
 var api = require('./controller/api');
 var blocks = {};
 
-mongoose.Promise = global.Promise;
-var db = mongoose.connect('mongodb://localhost:27017/bevisdb');  // 连接数据库
-
-db.connection.on('error', function (error) {
-	console.log('数据库连接失败：' + error);
-});
-db.connection.on('open', function(){
-	console.log('---- mongodb 数据库连接成功 ----')
-});
-
 app.set('view engine', 'hbs');                          // 指定模板文件的后缀名为hbs
 app.use(express.favicon());
 app.use(express.logger('dev'));
