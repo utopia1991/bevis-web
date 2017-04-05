@@ -31,7 +31,3 @@ To install the node packages, and also keep them updated, execute the following 
 ![Landing Page](client/images/demo/landingPage.jpg "Landing Page")
 
 ![Information](client/images/demo/information.jpg "Information")
-
-## License
-
-The MIT License(http://opensource.org/licenses/MIT)
