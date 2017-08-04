@@ -1,52 +1,48 @@
 <header>
-    <div class="container">
-        <div id="navbar">
-            <a href="#" class="menubtn"></a>
-            <div id="hamburgermenu">
-                <ul>
-                    <li><a href="/index">Home</a></li>
-                    <li><a href="/information">Information</a></li>
-                    <li><a href="/landpage">Landpage</a></li>
-                    <li><a href="/article">Article</a></li>
-                    <li><a href="/about">About Me</a></li>
-                    <li><a href="/map">Travel</a></li>
-                    <li><a href="/rain">Rain</a></li>
-                </ul>
-                <a class="bike bikeAni" href="/game"></a>
-            </div>
-        </div>
-        <div class="layout-title">
-            <span class="headLogin">
-                <span class="headLoginButton hide">
-                    <a href="/login" id="login">Login</a>
-                    <a href="/register" id="logout">Logout</a>
-                </span>
-                <span class="layout-myIcon" id="userLogo"></span>
-            </span>
-            <span class="defautFont largeFont layout-myName">{{head}}</span>
-        </div>
-        <div id="weather">
-            <script>
-                $('#weather').leoweather({format: '<div><i class="icon-{图标}"></i></div><p>{城市} {昼夜} {天气} {气温}℃</p>'});
-            </script>
-        </div>
-        <hr>
-        <div class="collapse navbar-collapse" id="main-navigation">
-            <p class="nav navbar-nav navbar-left">
-                <i class="fa fa-fw fa-google"></i> <a href="mailto:bevis19910619@gmail.com">bevis19910619@gmail.com</a>
-            </p>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/index">Home</a></li>
-                <li><a href="/landpage">Landpage</a></li>
-                <li><a href="/information">Information</a></li>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/article">Article</a></li>
-                <li><a href="/map">Travel</a></li>
-                <li><a href="/rain">Rain</a></li>
-                <li><a href="/fiveElement">Five Element</a></li>
-                <li><a href="/game">Game</a></li>
-            </ul>
-        </div>
-        <div class="overlay"></div>
+  <div class="container">
+    <div id="navbar">
+      <a href="#" class="menubtn"></a>
+      <div id="hamburgermenu">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/information">Information</a></li>
+          <li><a href="/landpage">Landpage</a></li>
+          <li><a href="/article">Article</a></li>
+          <li><a href="/about">About Me</a></li>
+          <li><a href="/travel">Travel</a></li>
+        </ul>
+        <a class="bike bikeAni" href="/about/game"></a>
+      </div>
     </div>
+    <div class="layout-title">
+      <span class="headLogin">
+        <span class="headLoginButton hide">
+          <a href="/login" id="login">登陆</a>
+          <a href="/register" id="logout">注册</a>
+        </span>
+        <span class="layout-myIcon" id="userLogo"></span>
+      </span>
+      <span class="defautFont largeFont layout-myName">{{head}}</span>
+    </div>
+    <a id="weather" href="/landpage/nature">
+      <script>
+        $('#weather').leoweather({format: '<div><i class="icon-{图标}"></i></div><p>{城市} {昼夜} {天气} {气温}℃</p>'});
+      </script>
+    </a>
+    <hr>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <p class="nav navbar-nav navbar-left">
+        <i class="fa fa-fw fa-google"></i> <a href="mailto:bevis19910619@gmail.com">bevis19910619@gmail.com</a>
+      </p>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="home"><a href="/">Home</a></li>
+        <li class="landpage"><a href="/landpage">Landpage</a></li>
+        <li class="information"><a href="/information">Information</a></li>
+        <li class="about"><a href="/about">About Me</a></li>
+        <li class="article"><a href="/article">Article</a></li>
+        <li class="travel"><a href="/travel">Travel</a></li>
+      </ul>
+    </div>
+    <div class="overlay"></div>
+  </div>
 </header>

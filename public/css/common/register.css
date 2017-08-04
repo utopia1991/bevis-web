@@ -1,0 +1,337 @@
+header,
+footer {
+  display: none !important;
+}
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-size: 100%;
+  font-weight: 400;
+  min-height: 100vh;
+}
+.main-register {
+  margin-top: -250px;
+  top: 50%;
+  left: -3%;
+  position: fixed;
+  z-index: 99;
+  text-align: center;
+}
+.main-register #alertMessage {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.main-register .register-form {
+  background: rgba(255, 255, 255, 0.3);
+}
+.main-register .register-form h2 {
+  font-family: classic;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+.main-register .register-form .form-control {
+  outline: none;
+  border-radius: 2px;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding: 6px 12px;
+  color: #555;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #ddd;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+}
+.main-register .register-form .btn {
+  display: inline-block;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 2px;
+  font-size: 16px;
+  padding: 12px 30px 10px;
+  font-family: "Raleway";
+  color: #fff;
+  background: #343838;
+}
+.main-register .register-form .btn:hover {
+  background: #222;
+}
+.slider__navi {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  z-index: 999;
+}
+.slider__navi a {
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin: 10px 0;
+  text-indent: -9999px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.2);
+}
+.slider__navi a.active {
+  background: #ffffff;
+}
+.slider_warpper {
+  /* Pikachu */
+  /* Blaziken */
+  /* Dialga */
+  /* Zekrom */
+  /* Animate-START point */
+  /* Animate-END point */
+}
+.slider_warpper .flex__container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  -o-flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  -webkit-box-pack: start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+}
+.slider_warpper .flex__container .flex__item {
+  height: 100vh;
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
+}
+.slider_warpper .flex__container .flex__item .flex__content {
+  margin-left: 80px;
+  width: 55%;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 0.1s linear 0.2s, -webkit-transform 0.2s linear 0.2s;
+  transition: opacity 0.1s linear 0.2s, -webkit-transform 0.2s linear 0.2s;
+  transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;
+  transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s, -webkit-transform 0.2s linear 0.2s;
+}
+.slider_warpper .flex__container .flex__item .flex__content .text-big {
+  font-family: 'Poppins', sans-serif;
+  font-size: 7.5em;
+  font-weight: 700;
+  line-height: 110px;
+}
+.slider_warpper .flex__container .flex__item .text__background {
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  left: 80px;
+  bottom: -60px;
+  color: rgba(0, 0, 0, 0.05);
+  font-size: 170px;
+  font-weight: 700;
+}
+.slider_warpper .flex__container .flex__item--left {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  width: 65%;
+  -webkit-transform-origin: left bottom;
+      -ms-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-transition: -webkit-transform 0.1s linear 0.4s;
+  transition: -webkit-transform 0.1s linear 0.4s;
+  transition: transform 0.1s linear 0.4s;
+  transition: transform 0.1s linear 0.4s, -webkit-transform 0.1s linear 0.4s;
+  opacity: 0;
+  position: relative;
+  overflow: hidden;
+}
+.slider_warpper .flex__container .flex__item--right {
+  width: 35%;
+  -webkit-transform-origin: right center;
+      -ms-transform-origin: right center;
+          transform-origin: right center;
+  -webkit-transition: -webkit-transform 0.1s linear 0s;
+  transition: -webkit-transform 0.1s linear 0s;
+  transition: transform 0.1s linear 0s;
+  transition: transform 0.1s linear 0s, -webkit-transform 0.1s linear 0s;
+  opacity: 0;
+}
+.slider_warpper .flex__container .pokemon__img {
+  position: absolute;
+  bottom: 20px;
+  right: 15%;
+  max-height: 40vw;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  -webkit-transition: opacity 0.43s 0.6s, -webkit-transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+  transition: opacity 0.43s 0.6s, -webkit-transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+  transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+  transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93), -webkit-transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+}
+.slider_warpper .flex__container.flex--active {
+  z-index: 2;
+}
+.slider_warpper .flex--preStart .flex__item--left,
+.slider_warpper .flex--preStart .flex__item--right,
+.slider_warpper .flex--active .flex__item--left,
+.slider_warpper .flex--active .flex__item--right {
+  opacity: 1;
+}
+.slider_warpper .flex--pikachu .flex__item--left {
+  background: url('/images/background/ocean.jpg') no-repeat;
+  background-size: cover;
+}
+.slider_warpper .flex--pikachu .flex__item--right {
+  background: #f4ecc5;
+}
+.slider_warpper .flex--blaziken .flex__item--left {
+  background: url('/images/background/wind.jpg') no-repeat;
+  background-size: cover;
+}
+.slider_warpper .flex--blaziken .flex__item--right {
+  background: #ffebcd;
+}
+.slider_warpper .flex--dialga .flex__item--left {
+  background: url('/images/landpage/footbanner.jpg') no-repeat;
+  background-size: cover;
+}
+.slider_warpper .flex--dialga .flex__item--right {
+  background: #ade8f7;
+}
+.slider_warpper .flex--zekrom .flex__item--left {
+  background: url('/images/slider/bg.png') no-repeat;
+  background-size: cover;
+}
+.slider_warpper .flex--zekrom .flex__item--right {
+  background: #a7bcbb;
+}
+.slider_warpper .animate--start .flex__content {
+  -webkit-transform: translate3d(0, -200%, 0);
+          transform: translate3d(0, -200%, 0);
+  opacity: 0;
+}
+.slider_warpper .animate--start .pokemon__img {
+  -webkit-transform: translate3d(-200px, 0, 0);
+          transform: translate3d(-200px, 0, 0);
+  opacity: 0;
+}
+.slider_warpper .animate--end .flex__item--left {
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+}
+.slider_warpper .animate--end .flex__item--right {
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+}
+.slider_warpper .animate--end .flex__content {
+  -webkit-transform: translate3d(0, 200%, 0);
+          transform: translate3d(0, 200%, 0);
+  opacity: 0;
+}
+.slider_warpper .animate--end .pokemon__img {
+  -webkit-transform: translate3d(200px, 0, 0);
+          transform: translate3d(200px, 0, 0);
+  opacity: 0;
+}
+.shake_effect {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+@-webkit-keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+}

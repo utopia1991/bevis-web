@@ -1,0 +1,43 @@
+.indexContent .g-lottery-case {
+  width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.indexContent .g-lottery-case .g-left {
+  width: 500px;
+  float: left;
+}
+.indexContent .g-lottery-case .g-left h2 {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: normal;
+  margin: 0px auto 20px;
+}
+.indexContent .g-lottery-case .g-left h2 span {
+  font-size: 30px;
+}
+.indexContent .g-lottery-case .g-left .g-lottery-box {
+  width: 360px;
+  height: 360px;
+  position: relative;
+  background: #e58e22;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.indexContent .g-lottery-case .g-left .g-lottery-box .g-lottery-img {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  background: url(../../images/lottery/bg-lottery.png) no-repeat;
+  left: 10px;
+  top: 10px;
+}
+.indexContent .g-lottery-case .g-left .g-lottery-box .playbtn {
+  outline: none;
+  width: 186px;
+  height: 186px;
+  position: absolute;
+  top: 77px;
+  left: 77px;
+  background: url(../../images/lottery/playbtn.png) no-repeat;
+}

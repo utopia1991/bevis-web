@@ -1,0 +1,96 @@
+{{#extend "stylesheets"}}
+    <link rel="stylesheet" type="text/css" href="/css/common/login.css"/>
+{{/extend}}
+
+<!--video background-->
+<body data-vide-bg="statics/video/ocean">
+
+<div class="loginTitle">
+  Welcome Guy!
+</div>
+
+<div id="login">
+  <div class="title">
+    User Login
+  </div>
+  <div class="loginl">
+    <form>
+      <input type="text" class="txt" id="username" value="用户名" autocomplete="off"/>
+      <input type="password" class="txt pwd" id="password" placeholder="密码" autocomplete="off"/>
+      <span class="but" value="Login" id="loginSubmit">登陆</span>
+    </form>
+    <div>
+      <span class="tu">
+        <i class="fa fa-fw fa-qq fa-2x"></i>
+      </span>
+      <span class="tu">
+        <i class="fa fa-fw fa-wechat fa-2x"></i>
+      </span>
+      <span class="tu">
+        <i class="fa fa-fw fa-weibo fa-2x"></i>
+      </span>
+      <span class="tu">
+        <i class="fa fa-fw fa-share-alt fa-2x"></i>
+      </span>
+    </div>
+  </div>
+  <div class="loginr">
+    <h3 class="wen">Had not an account? Register now!</h3>
+    <a class="an" href="/register">注册</a>
+  </div>
+</div>
+
+{{#extend "scripts"}}
+  <!-- this is the video background libs -->
+  <script src="/js/libs/video/jquery.vide.js"></script>
+  <script>
+    function submit(){
+      var username = $('#username').val();
+      var password = $('#password').val();
+      var data = {"username": username, "password": password};
+
+      $.ajax({
+        url: '/api/login',
+        type: 'POST',
+        data: data,
+        success: function (data, status) {
+          if (status === 'success') {
+            if(data.code === -1){
+              alert(data.err);
+            } else {
+              location.href = '/';
+            }
+          }
+        },
+        error: function (data, status) {
+          if (status === "error") {
+            alert('对不起，登陆失败');
+          }
+        }
+      });
+    }
+
+    $('#loginSubmit').on('click', function(){
+      submit();
+    });
+
+    document.onkeydown = function(event){
+      var e = event || window.event || arguments.callee.caller.arguments[0];
+      if(e && e.keyCode == 13){ // enter 键
+        submit();
+      }
+    };
+
+    $('#username').on('focus', function () {
+      var username = $(this).val();
+      if(username === "用户名"){
+        $(this).val("");
+      }
+    }).on('blur', function () {
+      var username = $(this).val();
+      if(username === ""){
+        $(this).val("用户名");
+      }
+    });
+  </script>
+{{/extend}}

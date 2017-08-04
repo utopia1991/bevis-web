@@ -1,0 +1,154 @@
+@defaultColor: #343838;
+
+body {
+  background: #4a525f url("../../images/background/subscribe-bg.png");
+}
+
+.hideit {
+  visibility: hidden;
+}
+
+.center {
+  position: relative;
+  text-align: center;
+
+  .rotateIntroduction {
+    display: inline-block;
+    background: url("../../images/icons/rotate.png") no-repeat;
+    background-size: 180px 180px;
+    width: 180px;
+    height: 180px;
+    margin: 10px auto;
+    position: relative;
+    animation: myrotate 30s linear 0s infinite;
+  }
+  @keyframes myrotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  /*
+   * @keyframes	规定动画
+   * animation	所有动画属性的简写属性，除了 animation-play-state 属性
+   * animation-name	规定 @keyframes 动画的名称
+   * animation-duration	规定动画完成一个周期所花费的秒或毫秒。默认是 0
+   * animation-timing-function	规定动画的速度曲线。默认是 "ease"
+   * animation-delay	规定动画何时开始。默认是 0
+   * animation-iteration-count	规定动画被播放的次数。默认是 1
+   * animation-direction	规定动画是否在下一周期逆向地播放。默认是 "normal"
+   * animation-play-state	规定动画是否正在运行或暂停。默认是 "running"
+   * animation-fill-mode	规定对象动画时间之外的状态。
+   */
+  .wordIntroduction {
+    font-size: 40px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 37%;
+    display: block;
+    font-weight: 700;
+  }
+}
+
+.whyuslist {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  font-family: "Open Sans";
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.aboutP {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #333;
+  position: relative;
+
+  #copyLink {
+    width: 200px;
+    height: 30px;
+    text-indent: 10px;
+    font-size: 15px;
+    border: 1px solid @defaultColor;
+    color: #333;
+    display: inline-block;
+  }
+
+  #copyButton {
+    color: #fff;
+    height: 30px;
+    background: @defaultColor;
+    border: 0;
+    width: 60px;
+    font-size: 20px;
+    line-height: 20px;
+    position: relative;
+    top: 1px;
+    left: -10px;
+  }
+}
+
+.hero-banner {
+  color: #555;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  .top-10 {
+    margin-top: 10px;
+  }
+}
+
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+
+  .progress-bar {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    text-align: center;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+  }
+}
+
+.features-block {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: #ccc;
+
+  i {
+    color: #68c39f;
+    float: left;
+    line-height: 100%;
+    display: block;
+    height: 120px;
+    line-height: 60px;
+    margin-right: 20px;
+  }
+
+  .icon-md {
+    font-size: 36px;
+  }
+
+  .row:first-child {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,152 @@
+#rocket-to-top,
+footer,
+header {
+  display: none !important;
+}
+
+.defautBlack {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.defautBlackHover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.defautBlackHoverAnima {
+  transition: background 0.3s ease 0.1s;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.loginTitle {
+  padding-top: 60px;
+  font-family: classic;
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+}
+
+#login {
+  width: 620px;
+  height: 330px;
+  background: rgba(255, 255, 255, 0.6);
+  position: fixed;
+  top: 170px;
+  left: -310px;
+  margin-left: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.8);
+
+  .title {
+    height: 50px;
+    .defautBlack;
+    color: #fff;
+    line-height: 40px;
+    text-indent: 20px;
+    font-size: 30px;
+    font-family: classic;
+
+    img.close {
+      float: right;
+      margin: 20px 20px 0 0;
+    }
+  }
+
+  .loginl {
+    width: 280px;
+    height: 240px;
+    float: left;
+    padding: 30px 0 0 40px;
+
+    input.txt {
+      font-family: 'Raleway';
+      color: #777;
+      width: 240px;
+      height: 40px;
+      border: 0;
+      background: #eeeeee;
+      text-indent: 10px;
+      margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .but {
+      font-size: 20px;
+      display: inline-block;
+      width: 240px;
+      height: 40px;
+      .defautBlack;
+      border: 0;
+      color: white;
+      float: right;
+      text-align: center;
+      line-height: 35px;
+      font-family: classic;
+      .defautBlackHoverAnima;
+
+      &:hover {
+        .defautBlackHover;
+      }
+    }
+
+    div {
+      margin-top: 62px;
+      width: 250px;
+      height: 60px;
+
+      .tu {
+        font-size: 20px;
+        display: inline-block;
+        .defautBlack;
+        width: 50px;
+        height: 50px;
+        margin: 0 3px;
+
+        i {
+          color: #fff;
+          margin-top: 5px;
+        }
+        .defautBlackHoverAnima;
+
+        &:hover {
+          .defautBlackHover;
+        }
+      }
+    }
+  }
+
+  .loginr {
+    width: 300px;
+    height: 240px;
+    float: right;
+
+    .wen {
+      margin: 60px 40px 0;
+      font-family: classic;
+      font-size: 25px;
+    }
+
+    .an {
+      width: 150px;
+      height: 50px;
+      .defautBlack;
+      border: 0;
+      display: inline-block;
+      text-align: center;
+      font-size: 24px;
+      line-height: 50px;
+      color: white;
+      margin: 35px 60px;
+      font-family: classic;
+      .defautBlackHoverAnima;
+
+      &:hover {
+        .defautBlackHover;
+      }
+    }
+  }
+}

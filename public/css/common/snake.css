@@ -1,0 +1,63 @@
+body {
+  background-color: #F6F5F3;
+}
+.gameContent {
+  width: 1100px;
+  position: relative;
+  text-align: center;
+  margin: 40px auto;
+  min-height: 423px;
+}
+.gameContent #pannel {
+  background: #fff;
+  width: 410px;
+  margin: 0 auto;
+}
+.gameContent #pannel table {
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+.gameContent #pannel table td {
+  border: 1px solid #808080;
+  width: 10px;
+  height: 10px;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  border: none;
+}
+.gameContent #pannel table .snake {
+  background: #000;
+}
+.gameContent #pannel table .food {
+  background: #0066CC;
+}
+.gameContent .gameIcon {
+  height: 56px;
+  width: 320px;
+  margin: auto;
+}
+.gameContent .gameIcon .icon-transfer {
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  float: left;
+  width: 60px;
+  height: 60px;
+  border-radius: 2px;
+  background-color: white;
+  text-align: center;
+  line-height: 60px;
+  border: solid 2px transparent;
+  -webkit-transition: border-color 0.4s ease-out;
+  transition: border-color 0.4s ease-out;
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.gameContent .gameIcon .icon-transfer:hover {
+  cursor: pointer;
+  border-color: #19d599;
+  -webkit-transition: none;
+  transition: none;
+}

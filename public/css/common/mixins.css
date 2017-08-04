@@ -1,0 +1,12 @@
+/*
+  Check here first before you start writing less/css there may be a mixin available to accomplish what you are trying to do.
+  All padding and margins should be done via mixins.
+*/
+/*
+  Sample mixin usages:
+  .padding(10px,0,5px,0) //note the commas
+  .padding(10px,0) //note that 0 does not need a px suffix
+  .padding(10px,auto)
+  .padding(10%,5%)
+  .padding(10px)
+*/

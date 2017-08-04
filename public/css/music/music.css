@@ -1,0 +1,95 @@
+#Music {
+  display: inline-block;
+  width: 66%;
+  height: 100%;
+  -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+}
+#Music .Audio {
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+#Music .Audio .title {
+  width: 100%;
+  height: 12%;
+  background: #222;
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+}
+#Music .Audio img.xxpic {
+  width: 100%;
+  height: 70%;
+  display: block;
+}
+#Music .Audio .Music_But {
+  width: 100%;
+  height: 18%;
+  background: #222;
+  padding-top: 10px;
+}
+#Music .Audio .Music_But .but {
+  width: 135px;
+  height: 30px;
+  margin: 25px auto;
+}
+#Music .Audio .Music_But .but span {
+  width: 27px;
+  height: 26px;
+  display: block;
+  float: left;
+}
+#Music .Audio .Music_But .but span.prev {
+  background: url("../../images/music/sm_icon.png") -49px 0;
+}
+#Music .Audio .Music_But .but span.next {
+  background: url("../../images/music/sm_icon.png") -124px 0;
+}
+#Music .Audio .Music_But .but span.play {
+  width: 20px;
+  background: url("../../images/music/sm_icon.png") -101px 0;
+  margin: 0 30px;
+}
+#Music .Txt {
+  width: 40%;
+  height: 100%;
+  float: right;
+  background: #232933;
+}
+#Music .Txt .title {
+  width: 100%;
+  height: 12%;
+  background: #34507f;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  line-height: 60px;
+}
+#Music .Txt ul li {
+  width: 100%;
+  height: 8.8%;
+  list-style: none;
+  background: url("../../images/music/bg4.png");
+  color: #fff;
+  font-size: 14px;
+  line-height: 40px;
+}
+#Music .Txt ul li a {
+  color: #7e868e;
+  text-decoration: none;
+  background: url("../../images/music/play.png") no-repeat 10px 13px;
+  display: block;
+  text-indent: 30px;
+  height: 40px;
+}
+#Music .Txt ul li a:hover {
+  color: white;
+  border-bottom: 2px solid #34507f;
+}
+#Music .Txt ul li.active a {
+  color: #fff;
+  border-bottom: 2px solid #34507f;
+  background: url("../../images/music/pause.png") no-repeat 10px 13px;
+}

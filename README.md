@@ -9,13 +9,19 @@
 To install the node packages, and also keep them updated, execute the following command while in the server root directory.
 
 ```
-> npm install
+> npm i
 ```
 
 ## Running the server
 
 ```
-> gulp overlord
+> npm start
+```
+
+## Running the server in production
+
+```
+> node index.js
 ```
 
 ## Run ESLint on any file or directory like this:
@@ -24,10 +30,22 @@ To install the node packages, and also keep them updated, execute the following 
 > $ ./node_modules/.bin/eslint filepath.js
 ```
 
-![首页](client/images/demo/index.jpg "首页")
+![首页](public/images/demo/index.jpg "首页")
 
-![关于我](client/images/demo/about.jpg "关于我")
+![关于我](public/images/demo/about.jpg "关于我")
 
-![Landing Page](client/images/demo/landingPage.jpg "Landing Page")
+![Landing Page](public/images/demo/landingPage.jpg "Landing Page")
 
-![Information](client/images/demo/information.jpg "Information")
+![Information](public/images/demo/information.jpg "Information")
+
+## Server Port in dev with browser-sync
+
+```
+> localhost:3000
+```
+
+## Server Port in production
+
+```
+> localhost:2000
+```

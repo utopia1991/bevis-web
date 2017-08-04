@@ -1,0 +1,40 @@
+{{#extend "stylesheets"}}
+    <link rel="stylesheet" type="text/css" href="/css/libs/jquery-ui.css"/>
+{{/extend}}
+
+<div class="indexContent">
+    <div id="dialog" title="Tab data">
+        <form>
+            <fieldset class="ui-helper-reset">
+                <label for="tab_title">Title</label>
+                <input type="text" name="tab_title" id="tab_title" value="Title" class="ui-widget-content ui-corner-all">
+                <label for="tab_content">Content</label>
+                <textarea name="tab_content" id="tab_content" class="ui-widget-content ui-corner-all">Content</textarea>
+            </fieldset>
+        </form>
+    </div>
+    <button id="add_tab">Add Tabs</button>
+    <div id="tabs">
+        <ul>
+            <li>
+                <a href="#tabs-1">Sahala's Story</a>
+                <span class="ui-icon ui-icon-close" role="presentation">Remove Tab</span>
+            </li>
+        </ul>
+        <div id="tabs-1">
+            <p>台灣的著名作家──三毛</p>
+            <p>1943年3月26日出生於重慶，浙江省定海縣人。本名為陳懋平，1946年改名陳平。</p>
+            <p>筆名『三毛』更不知出自何處，只在她的《鬧學記》一篇序文中提及『三毛』二字暗藏一個《易經》的卦象，至於這卦象究竟隱藏何種玄機，序文中並沒有進一步的交代。</p>
+            <p>三毛的母親繆進蘭曾在〈我的女兒，大家的三毛〉這篇文章中，提及四個兄弟姊妹裡，次女三毛的性格最為特行卓立、不依常規，以及不能忍受虛假，因此父母要在她身邊看守著每一腳步是否踏穩。</p>
+            <p>另外，有讀者認為『流浪』才是三毛真正的名字，無論是她的遺作、她的遊歷和她心靈情感的轉折，始終透著一點點浪跡天涯的意味。</p>
+            <p>1973年7月，三毛與荷西在沙漠小鎮阿尤恩結婚。與荷西一道生活的歲月，三毛的文章充滿歡笑、喜樂，讀者閱讀他的小說，彷彿感受著她愉悅的婚姻生活，即使面對大風沙的侵襲，她仍顯得積極與樂觀。然而自荷西離開人世後，三毛的文章也頓時『黑暗』了起來，其文字不再有笑容，代替的只是無盡的悲傷。</p>
+            <p>1990年，三毛創作的電影劇本《滾滾紅塵》榮獲金馬獎八項大獎。其生平重要著作有《撒哈拉的故事》、《雨季不再來》、《哭泣的駱駝》、《我的寶貝》、《鬧學記》……等散文小說集，譯有《娃娃看天下》、《蘭嶼之歌》，以及創作電影劇本《滾滾紅塵》、《親愛的三毛》、《我的快樂天堂》、《高原的百合花》。</p>
+            <p>然而令人惋惜的是，1991年1月4日凌晨，三毛在醫院自縊身亡，享年四十八歲。</p>
+        </div>
+    </div>
+</div>
+
+{{#extend "scripts"}}
+    <script type="text/javascript" src="/js/libs/jquery-ui.min.js"></script>
+    <script src="/js/article/aboutArticle.js"></script>
+{{/extend}}
